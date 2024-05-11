@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int vetor[4];
     int i;
 
-    printf("Digite quatro valores:\n");
+    printf("Digite quatro numero:\n");
 
     for (i = 0; i < 4; i++) {
         scanf("%d", &vetor[i]);
     }
 
-    printf("Valores armazenados no vetor:\n");
+    printf("numeros do vetor:\n");
 
     for (i = 0; i < 4; i++) {
         printf("%d ", vetor[i]);
     }
 
-    return 0;
 }
