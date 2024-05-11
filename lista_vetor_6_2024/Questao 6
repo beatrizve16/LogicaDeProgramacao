@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[100];
+    int i;
+
+    for (i = 0; i < 100; i++) {
+        if (i % 2 == 0) {
+            vetor[i] = 1; // número par
+        } else {
+            vetor[i] = 0; // número ímpar
+        }
+    }
+
+    printf("Vetor preenchido:\n");
+
+    for (i = 0; i < 100; i++) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}
