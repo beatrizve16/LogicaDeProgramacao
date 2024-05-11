@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int a[10], b[20], uniao[30];
+    int i, j;
+
+    printf("Digite os elementos do vetor a:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &a[i]);
+        uniao[i] = a[i];
+    }
+
+    printf("Digite os elementos do vetor b:\n");
+
+    for (j = 0; j < 20; j++) {
+        scanf("%d", &b[j]);
+        uniao[i+j] = b[j];
+    }
+
+    printf("Vetor união:\n");
+
+    for (i = 0; i < 30; i++) {
+        printf("%d ", uniao[i]);
+    }
+
+    return 0;
+}
