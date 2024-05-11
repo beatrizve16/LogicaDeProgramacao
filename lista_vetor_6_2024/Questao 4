@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int notas[10];
+    int i, countAboveAverage = 0;
+    float media = 0;
+
+    printf("Digite as notas dos 10 alunos:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &notas[i]);
+        media += notas[i];
+    }
+
+    media /= 10;
+
+    printf("Relatório de notas:\n");
+
+    for (i = 0; i < 10; i++) {
+        printf("Aluno %d: %d\n", i+1, notas[i]);
+        if (notas[i] > media) {
+            countAboveAverage++;
+        }
+    }
+
+    printf("Média da turma: %.2f\n", media);
+    printf("Quantidade de notas acima da média: %d\n", countAboveAverage);
+
+    return 0;
+}
