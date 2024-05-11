@@ -1,23 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char entrada[61]; // 60 caracteres + 1 para o caractere nulo
+void main() {
+    char entrada[60]; 
     int i;
 
-    printf("Digite uma palavra ou sentença (limite de 60 caracteres):\n");
+    printf("Digite uma palavra  (limite de 60 caracteres):\n");
 
     for (i = 0; i < 60; i++) {
-        entrada[i] = getchar();
-        if (entrada[i] == '\n') {
+        palavra[i] = getchar();
+        if (palavra[i]>60){
             break;
+            printf("Limite de caracteres atingido");
         }
     }
 
-    entrada[i] = '\0'; // Adiciona o caractere nulo para formar a string
 
-    printf("Você digitou: %s\n", entrada);
-    printf("Quantidade de caracteres digitados: %d\n", strlen(entrada));
+    printf("Quantidade de caracteres digitados: %d\n", strlen(palavra));
 
-    return 0;
 }
