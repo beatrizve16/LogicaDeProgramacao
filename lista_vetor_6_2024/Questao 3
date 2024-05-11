@@ -1,18 +1,19 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int notas[10];
     int i;
     float media = 0;
+    float SomaMedia=0;
 
-    printf("Digite as notas dos 10 alunos:\n");
+    printf("Digite as 10 notas:\n");
 
     for (i = 0; i < 10; i++) {
         scanf("%d", &notas[i]);
-        media += notas[i];
+        SomaMedia += notas[i];
     }
 
-    media /= 10;
+    media = SomaMedia /10;
 
     printf("Relatório de notas:\n");
 
@@ -22,5 +23,4 @@ int main() {
 
     printf("Média da turma: %.2f\n", media);
 
-    return 0;
 }
