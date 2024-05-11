@@ -3,7 +3,7 @@
 int main() {
     int a[10], b[20], comuns[10];
     int i, j, k = 0;
-    int encontrou;
+    int iguais;
 
     printf("Digite os elementos do vetor a:\n");
 
@@ -17,32 +17,21 @@ int main() {
         scanf("%d", &b[j]);
     }
 
-    // Verifica elementos comuns
     for (i = 0; i < 10; i++) {
         for (j = 0; j < 20; j++) {
             if (a[i] == b[j]) {
-                encontrou = 0;
-                // Verifica se o elemento já está no vetor de elementos comuns
+                iguais = 0;
                 for (int m = 0; m < k; m++) {
                     if (comuns[m] == a[i]) {
-                        encontrou = 1;
+                        iguais = 1;
                         break;
                     }
                 }
-                if (!encontrou) {
+                if (!iguais) {
                     comuns[k] = a[i];
                     k++;
                 }
-                break;
+                break; 
             }
         }
     }
-
-    printf("Elementos comuns:\n");
-
-    for (i = 0; i < k; i++) {
-        printf("%d ", comuns[i]);
-    }
-
-    return 0;
-}
