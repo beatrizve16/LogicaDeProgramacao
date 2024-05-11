@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() {
+    int vetor1[20], vetor2[20], resultado[20];
+    char operacoes[20];
+    int i;
+
+    printf("Digite os elementos do primeiro vetor:\n");
+
+    for (i = 0; i < 20; i++) {
+        scanf("%d", &vetor1[i]);
+    }
+
+    printf("Digite os elementos do segundo vetor:\n");
+
+    for (i = 0; i < 20; i++) {
+        scanf("%d", &vetor2[i]);
+    }
+
+    printf("Digite as operações (+, -, * ou /) para cada elemento:\n");
+
+    for (i = 0; i < 20; i++) {
+        scanf(" %c", &operacoes[i]);
+    }
+
+    for (i = 0; i < 20; i++) {
+        switch (operacoes[i]) {
+            case '+':
+                resultado[i] = vetor1[i] + vetor2[i];
+                break;
+            case '-':
+                resultado[i] = vetor1[i] - vetor2[i];
+                break;
+            case '*':
+                resultado[i] = vetor1[i] * vetor2[i];
+                break;
+            case '/':
+                resultado[i] = vetor1[i] / vetor2[i];
+                break;
+            default:
+                printf("Operação inválida!\n");
+                return 1;
+        }
+    }
+
+    printf("Resultados das operações:\n");
+
+    for (i = 0; i < 20; i++) {
+        printf("%d ", resultado[i]);
+    }
+
+    return 0;
+}
