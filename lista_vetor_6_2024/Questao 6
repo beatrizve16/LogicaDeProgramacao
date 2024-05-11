@@ -1,22 +1,21 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int vetor[100];
     int i;
 
     for (i = 0; i < 100; i++) {
         if (i % 2 == 0) {
-            vetor[i] = 1; // número par
+            vetor[i] = 1; 
         } else {
-            vetor[i] = 0; // número ímpar
+            vetor[i] = 0; 
         }
     }
 
-    printf("Vetor preenchido:\n");
+    printf("Vetor completo:\n");
 
     for (i = 0; i < 100; i++) {
         printf("%d ", vetor[i]);
     }
 
-    return 0;
 }
