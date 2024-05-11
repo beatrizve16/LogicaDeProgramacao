@@ -1,27 +1,26 @@
 #include <stdio.h>
 
-int main() {
+void main() {
     int vetor1[10], vetor2[10], resultado[10];
     int i;
 
-    printf("Digite os elementos do primeiro vetor:\n");
+    printf("Digite os numeros do primeiro vetor:\n");
 
     for (i = 0; i < 10; i++) {
         scanf("%d", &vetor1[i]);
     }
 
-    printf("Digite os elementos do segundo vetor:\n");
+    printf("Digite os numeros do segundo vetor:\n");
 
     for (i = 0; i < 10; i++) {
         scanf("%d", &vetor2[i]);
     }
 
-    printf("Soma posicional dos vetores:\n");
+    printf("Soma da posicao dos vetores:\n");
 
     for (i = 0; i < 10; i++) {
         resultado[i] = vetor1[i] + vetor2[i];
         printf("%d ", resultado[i]);
     }
 
-    return 0;
 }
