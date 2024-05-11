@@ -1,6 +1,6 @@
-#include <stdio.h>
+##include <stdio.h>
 
-int main() {
+void main() {
     int vetor1[20], vetor2[20], resultado[20];
     char operacoes[20];
     int i;
@@ -49,5 +49,4 @@ int main() {
         printf("%d ", resultado[i]);
     }
 
-    return 0;
 }
