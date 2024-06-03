@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main(void)
+{
+    int i, j;
+    float notas[10][1];
+    char alunos[10][10];
+    float media[10];
+
+    printf("Digite as notas de cada aluno\n");
+    printf("Digite -1 para sair\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            printf("\nAluno - %d Nota %d: ", i, j + 1);
+            scanf("%d", &notas[i][j]); 
+            
+            if (notas[i][j] == -1)
+            {
+                break;
+            }
+        }
+    }
+
+    for (i = 0; i < sizeof(notas[i]); i++)
+    {
+        printf("Digite os nomes dos alunos \n");
+        for (j = 0; j < 10; j++)
+        {
+            alunos[i][j] = getche();
+            if (alunos[i][j] == 13)
+            {
+                break;
+            }
+        }
+    }
+
+    for (i = 0; i < 10; i++)
+    {
+        media[i] = (notas[i][j] + notas[i][j]) / 2;
+    }
+
+    printf("Centro Universitario de Brasilia\n");
+    printf("Relatorio de desempenho da turma A\n");
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("O Aluno %c teve as seguintes notas: P1=%d P2=%d e Media Final=%f\n", alunos[i][j], notas[i][j], notas[i][j], media[i]);
+    }
+}
